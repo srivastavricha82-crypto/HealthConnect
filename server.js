@@ -50,7 +50,7 @@ connectMongoDB().catch(() => {
     else console.warn("The planner is available, but MongoDB saves will retry on the next request.");
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
